@@ -19,7 +19,7 @@ pipeline {
             steps {
                 bat 'docker stop continuousdeployment || exit 0'
                 bat 'docker rm continuousdeployment || exit 0'
-                bat 'docker run -d -p 5400:5000 --name continuousdeployment'
+                bat 'docker container run -d -p 5400:5000 --name continuousdeployment'
             }
         }
     }
