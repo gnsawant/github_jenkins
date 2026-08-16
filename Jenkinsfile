@@ -17,9 +17,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'docker stop tut5 || exit 0'
-                bat 'docker rm tut5 || exit 0'
-                bat 'docker container run -d -p 5400:5000 --name tut5'
+                bat 'docker stop containertut5 || exit 0'
+                bat 'docker rm containertut5 || exit 0'
+                bat 'docker run -d -p 5400:5000 --name containertut5 tut5'
             }
         }
     }
